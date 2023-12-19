@@ -1,9 +1,7 @@
 ﻿
-using System.Runtime.ConstrainedExecution;
-
 namespace tabuleiro
 {
-    class Peca
+    abstract class Peca
     {
         public Posicao posicao {  get; set; }
         public Cor cor { get; set; }
@@ -21,5 +19,7 @@ namespace tabuleiro
         {
             qteMovimento++;
         }
+        public abstract bool[,] movimentosPossiveis();
+        
     }
 }
