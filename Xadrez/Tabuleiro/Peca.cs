@@ -5,7 +5,7 @@ namespace tabuleiro
     {
         public Posicao posicao {  get; set; }
         public Cor cor { get; set; }
-        public int qteMovimento { get; protected set; }
+        public int qteMovimentos { get; protected set; }
         public Tabuleiro tab { get; protected set; }
 
         public Peca(Tabuleiro tab, Cor cor)
@@ -13,17 +13,17 @@ namespace tabuleiro
             this.posicao = null;
             this.cor = cor;
             this.tab = tab;
-            this.qteMovimento = 0;
+            this.qteMovimentos = 0;
         }
 
         public void incrementarQteMovimento()
         {
-            qteMovimento++;
+            qteMovimentos++;
         }
 
         public void decrementarQteMovimento()
         {
-            qteMovimento--;
+            qteMovimentos--;
         }
 
         public bool existeMovimentosPossiveis()
